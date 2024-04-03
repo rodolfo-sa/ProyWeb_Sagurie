@@ -1,0 +1,45 @@
+
+
+.img-thumbnail {
+    width: 444px;
+    height: 400px;
+  }
+  body {
+    background-color:darksalmon
+  }
+
+  #thlq{
+    color: rgb(255, 255, 255);
+  }
+  #thld{
+    color: azure;
+  }
+  .imagen {
+    flex: 1; /* Permite que ambos elementos ocupen el mismo ancho dentro de la caja */
+  }
+  .box {
+    display: flex;
+    max-width: 600px; /* Establece la anchura máxima deseada */
+    text-align: left;
+    padding-left: 120px; /* Agrega un relleno a la izquierda para separar el contenido del borde izquierdo */
+    
+  }
+  .imagen {
+    flex: 1;
+    margin-right: 60px; /* Agrega margen a la derecha para separar los elementos */
+  }
+  #carrusel{
+    padding-bottom: 40px;
+  }
+ 
+footer {
+  
+    margin-top: 30px;
+    width: 100vw; 
+    height: 8vw; 
+    display: flex; 
+    justify-content: space-between; 
+    background-color: rgb(0, 0, 0); 
+    color: azure;
+  }
+  
