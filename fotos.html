@@ -6,31 +6,46 @@
   <title>Galería de Fotos - Mi Sitio Web</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/estilos.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<header>
+  <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img src="img\logo.png" width="30px" height="30px" alt="Logo"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="inicio.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="quienes.html">Quiénes Somos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="fotos.html">Galería de Fotos</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-</header>
+      <a class="navbar-brand"><img src="img\logo.png" width="30px" height="30px" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="hora" id="clock"></div>
+    <script>
+        setInterval(() => {
+            let date = new Date()
+            let clock = document.getElementById('clock')
+            clock.innerHTML = 
+            date.getHours()+":"+
+            date.getMinutes()+":"+
+            date.getSeconds()
+        }, 1000);
+    </script>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="inicio.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="quienes.html">Quiénes Somos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="fotos.html">Galería de Fotos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="clima.html">Clima</a>
+          </li>
+        </ul>
+        
+    </nav>
+  </header>
 
 <div class="container">
   <center>
@@ -165,18 +180,18 @@
 <!-- Modales para las fotos (repetir para cada foto) -->
 
 <center>
-<footer>
-  <div class="container">
-    <p>Adan Sagurie © 2024 Derechos reservados</p>
-    <div class="social-icons">
-      <a href="#"><img src="img/logof.jpg" width="30px" height="30px" alt="Facebook"></a>
-      <a href="#"><img src="img/logoi.png" width="30px" height="30px" alt="Instagram"></a>
+  <footer>
+    <div class="container">
+      <p>Adan Sagurie © 2024 Derechos reservados</p>
+      <div class="social-icons">
+        <a ><img src="img/logof.jpg" width="30px" height="30px" alt="Facebook"></a>
+        <a ><img src="img/logoi.png" width="30px" height="30px" alt="Instagram"></a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 </center>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 

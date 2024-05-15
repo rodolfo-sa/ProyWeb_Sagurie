@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restablecer Contraseña por Teléfono - Mi Sitio Web</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css"> 
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="form-login">
+        <h5>Restablecer Contraseña por Teléfono</h5>
+        <form id="resetPhoneForm" method="POST">
+            <div class="form-group">
+                <label for="phone">Número de Teléfono:</label>
+                <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{9,}" required><br>
+            </div>
+            <button type="submit" class="btn btn-primary">Restablecer Contraseña</button>
+            <a href="login.html" class="btn btn-secondary">Volver a Login</a>
+        </form>
+        <div id="resetPhoneMessage"></div>
+    </section>
+
+    <script>
+        $(document).ready(function() {
+            $('#resetPhoneForm').submit(function(event) {
+                event.preventDefault(); 
+                
+                var phone = $('#phone').val();
+
+                if (!/^[0-9]{9,}$/.test(phone)) {
+                    $('#resetPhoneMessage').text('El número de teléfono debe ser numérico y tener al menos 9 caracteres sin espacios.');
+                } else {
+                    $('#resetPhoneMessage').text('Se ha enviado un enlace para restablecer tu contraseña a tu teléfono.');
+                }
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

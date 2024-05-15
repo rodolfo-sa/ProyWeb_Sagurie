@@ -1,45 +1,132 @@
 
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: darksalmon;
+}
+
+main {
+  flex: 1;
+}
+
+
+footer {
+  margin-top: 30px;
+  width: 100%;
+  height: 5vw;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  background-color: rgb(0, 0, 0);
+  color: azure;
+  text-align: center; 
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+
+footer .social-icons {
+  margin-top: 5px; 
+}
 
 .img-thumbnail {
-    width: 444px;
-    height: 400px;
-  }
-  body {
-    background-color:darksalmon
-  }
+  width: 444px;
+  height: 400px;
+}
 
-  #thlq{
-    color: rgb(255, 255, 255);
-  }
-  #thld{
-    color: azure;
-  }
-  .imagen {
-    flex: 1; /* Permite que ambos elementos ocupen el mismo ancho dentro de la caja */
-  }
-  .box {
-    display: flex;
-    max-width: 600px; /* Establece la anchura máxima deseada */
-    text-align: left;
-    padding-left: 120px; /* Agrega un relleno a la izquierda para separar el contenido del borde izquierdo */
-    
-  }
-  .imagen {
-    flex: 1;
-    margin-right: 60px; /* Agrega margen a la derecha para separar los elementos */
-  }
-  #carrusel{
-    padding-bottom: 40px;
-  }
- 
-footer {
-  
-    margin-top: 30px;
-    width: 100vw; 
-    height: 8vw; 
-    display: flex; 
-    justify-content: space-between; 
-    background-color: rgb(0, 0, 0); 
-    color: azure;
-  }
-  
+#thlq {
+  color: rgb(255, 255, 255);
+}
+
+#thld {
+  color: azure;
+}
+
+.imagen {
+  flex: 1;
+}
+
+.box {
+  display: flex;
+  max-width: 600px;
+  text-align: left;
+  padding-left: 120px;
+}
+
+.imagen {
+  flex: 1;
+  margin-right: 60px;
+}
+
+#carrusel {
+  padding-bottom: 40px;
+}
+
+.form-login {
+  width: 500px;
+  height: 400px;
+  background: #4e4d4d;
+  margin: auto;
+  margin-top: 180px;
+  box-shadow: 7px 13px 37px #000;
+  padding: 20px 30px;
+  border-top: 4px solid #017bab;
+  color: white;
+}
+
+.form-login h5 {
+  margin: 0;
+  text-align: center;
+  height: 40px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid;
+}
+
+#errorMessage {
+  color: red;
+}
+
+.toggle-password {
+  position: relative;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.form-group label {
+  margin-right: 10px;
+  width: 150px;
+  text-align: right;
+}
+
+.form-group input {
+  flex: 1;
+  max-width: 250px;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.hora {
+  font-size: 1.2em;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
